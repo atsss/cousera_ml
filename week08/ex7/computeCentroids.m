@@ -1,7 +1,7 @@
 function centroids = computeCentroids(X, idx, K)
-%COMPUTECENTROIDS returns the new centroids by computing the means of the 
+%COMPUTECENTROIDS returns the new centroids by computing the means of the
 %data points assigned to each centroid.
-%   centroids = COMPUTECENTROIDS(X, idx, K) returns the new centroids by 
+%   centroids = COMPUTECENTROIDS(X, idx, K) returns the new centroids by
 %   computing the means of the data points assigned to each centroid. It is
 %   given a dataset X where each row is a single data point, a vector
 %   idx of centroid assignments (i.e. each entry in range [1..K]) for each
@@ -26,12 +26,16 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
+for k = 1:K
+    % 各クラスタに分類されたXのインデックス番号を抽出
+    same_cluster_idx = find(idx == k);
 
+    % 各クラスタに分類されたXの数を算出
+    examples_num = size(same_cluster_idx, 1);
 
-
-
-
-
+    % 重心の位置を計算
+    centroids(k, :) = sum(X(same_cluster_idx, :)) / examples_num;
+end
 
 % =============================================================
 
