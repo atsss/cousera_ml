@@ -1,6 +1,9 @@
 # COUSERA Machine Learning
 > https://www.coursera.org/learn/machine-learning
 
+## docs
+> https://drive.google.com/drive/u/1/folders/1asvmW7f6jg444A6EG7LC0SLWC--RGHU9
+
 ## references
 > https://qiita.com/FukuharaYohei/items/44d97f411f0b1baaa42c
 > https://github.com/MasashiFukuzawa/Coursera_MachineLearning
